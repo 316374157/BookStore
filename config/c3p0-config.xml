@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!-- 命名的配置,可以通过方法调用实现 -->
+    <named-config name="test">
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/BookStore?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">25</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+    </named-config>
+</c3p0-config>
